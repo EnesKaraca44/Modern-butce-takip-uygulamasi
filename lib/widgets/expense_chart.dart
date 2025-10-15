@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:fl_chart/fl_chart.dart';
-import '../models/transaction.dart';
 import '../theme/app_theme.dart';
 
 class ExpenseChart extends StatelessWidget {
@@ -96,7 +95,6 @@ class ExpenseChart extends StatelessWidget {
           spacing: 12,
           runSpacing: 8,
           children: expensesByCategory.entries.map((entry) {
-            final percentage = (entry.value / totalExpense * 100).round();
             final colorIndex = expensesByCategory.keys.toList().indexOf(entry.key);
             
             return Row(

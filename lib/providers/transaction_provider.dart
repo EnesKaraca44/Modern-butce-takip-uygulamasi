@@ -26,7 +26,7 @@ class TransactionProvider extends ChangeNotifier {
         await StorageService.setFirstLaunchCompleted();
       }
     } catch (e) {
-      print('Error loading transactions: $e');
+      // Error loading transactions - handle silently
       _transactions = [];
     } finally {
       _isLoading = false;

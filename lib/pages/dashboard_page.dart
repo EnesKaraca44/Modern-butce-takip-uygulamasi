@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import '../models/transaction.dart';
 import '../widgets/summary_card.dart';
 import '../widgets/transaction_item.dart';
 import '../widgets/expense_chart.dart';
@@ -355,7 +354,7 @@ class _DashboardPageState extends State<DashboardPage> {
                     color: isCurrentMonth ? AppTheme.primaryColor : null,
                   ),
                 ),
-                subtitle: Text('${currentDate.year}'),
+                subtitle: Text(currentDate.year.toString()),
                 onTap: () {
                   Navigator.pop(context);
                   ScaffoldMessenger.of(context).showSnackBar(
